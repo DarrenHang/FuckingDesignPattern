@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "FuckingDesignPattern"
 include(":app")
- 
+include(":base")
+include(":skin")

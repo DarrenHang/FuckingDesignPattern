@@ -1,19 +1,16 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
 }
 
 android {
-    namespace = "com.darren.designpattern"
-    compileSdk = 34
+    namespace = "com.darren.base"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.darren.designpattern"
         minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -32,10 +29,6 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
-
-    implementation(project(":skin"))
 }
